@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="card mx-auto">
     <img v-bind:src="this.poster"/>
 </div>
 </template>
@@ -18,10 +18,3 @@ export default {
   },
 };
 </script>
-
-<style>
-img {
-    max-width: 100%;
-    max-height: 100%;
-}
-</style>

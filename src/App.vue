@@ -10,9 +10,11 @@
         </div>
       </div>
       <div v-else>
-        <div class="outer">
-          <div v-bind:key="i" v-for="(movie, i) in movies">
-            <Card v-bind:info="movie"/>
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-5">
+            <div v-bind:key="i" v-for="(movie, i) in movies">
+              <Card v-bind:info="movie"/>
+            </div>
           </div>
         </div>
       </div>
@@ -47,16 +49,15 @@ export default {
     },
     components: { Card }
 };
+
 </script>
 
 <style>
+
 body {
-  display: flex;
-  justify-content: center;
   background: #f6f6f6;
-  font-family: "Roboto Slab", serif;
-  line-height: 1.4;
 }
+
 .spinner-border {
   position: fixed;
   z-index: 1;
@@ -68,16 +69,14 @@ body {
   height: 50px;
   margin: auto;
 }
-#app{
-    width: 100%;
+
+.sr-only {
+  display: none;
 }
+
 .outer {
   border: 1px solid #000;
-  /* display:flex; */
-  /* justify-content: center; */
-  padding: 3px;
+  padding:5px;
 }
-.outer > div {
-  margin:2px;
-}
+
 </style>
